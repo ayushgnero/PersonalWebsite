@@ -7,9 +7,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dorsa&family=Major+Mono+Display&display=swap');
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="/Scripts/Lib/PRWMLoader.js"></script>
-    <link rel="stylesheet" href="mystyle.css">
-    <link rel="stylesheet" href="Loader.css">
+    <link rel="stylesheet" href="Styles/mystyle.css">
+    <link rel="stylesheet" href="Styles/Loader.css">
 
     <title>Ayush Gautam</title>
 </head>
@@ -18,12 +19,12 @@
     <div class="loader-container">
         <div class="loader"></div>
     </div>
-    <div class="main">
-        <div id="canvas" class="model">
-        </div>
-        <div class="flex">
-
-            <div class="name textName shuffle">
+    <div class="main container">
+        <section id="canvas" class="model">
+            <script src="/Scripts/ModelScripts/App.js"></script>
+        </section>
+        <section class="flex">
+            <div class="name textName">
                 <h1 style="color: #dfdfdf;
                 font-size: 13rem;">
                     Ayush
@@ -33,20 +34,24 @@
                     Gautam
                 </h2>
             </div>
-            <div class="name shuffle" style="
-            max-width: 32vw;
-            display: flex;
-            align-items: center;
-            ">
-                <p style="color:white;
-            font-family: 'Major Mono Display', monospace;
-            ">Full Stack Developer from Bangalore, India, with a knack for crafting secure B2B applications. My expertise in Java, Python, and React.js is driven by a passion for innovative solutions and cloud technologies.</p>
+            <div class="name" style="
+                max-width: 40vw;
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+                ">
+                    <p style="color:white;
+                    font-family: 'Major Mono Display', monospace;
+                    " class="shuffle">Full Stack Developer from Bangalore, India, with a knack for crafting secure B2B applications.</p>
             </div>
-
-        </div>
+        </section>
+        <section class="page2">
+            <h2>hello</h2>
+        </section>
     </div>
-    <script src="/Scripts/ModelScripts/App.js"></script>
     <script src="/Scripts/ModelScripts/Loader.js"></script>
+    <script src="/Scripts/ModelScripts/Shuffle.js"></script>
+
 </body>
 
 </html>

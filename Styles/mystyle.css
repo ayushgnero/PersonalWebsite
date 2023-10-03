@@ -4,6 +4,7 @@ html {
     height: 100vh;
     margin: 0;
     background-color: #050808;
+    overflow-x: hidden;
 }
 
 html .content,
@@ -42,8 +43,9 @@ body .content span {
     align-items: center;
     display: flex;
     z-index: 99;
-    position: absolute;
+    position: relative;
     justify-content: center;
+    scroll-snap-align: start;
 }
 
 .model {
@@ -85,4 +87,25 @@ body .content span {
         max-width: 80vw;
         text-align: center;
     }
+}
+
+.snap{
+    scroll-snap-type: y mandatory;
+    overflow-y:scroll;
+    height: 100vh;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.page2{
+    position: absolute;
+    width: 100vw;
+    color:#fff;
+    scroll-snap-align: start;
 }
