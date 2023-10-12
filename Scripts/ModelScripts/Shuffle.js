@@ -31,8 +31,8 @@ const random_char = () => {
     const a = anime({
       targets: params,
       progress: 1,
-      delay: 1000,
-      duration: 1000,
+      delay: 500,
+      duration: 100,
       easing: 'easeInQuad',
       update: () => {
         el.textContent = mask(chars, params.progress);
@@ -47,3 +47,4 @@ const random_char = () => {
   for (const el of document.querySelectorAll('.shuffle')) {
     shuffle(el);
   }
+  

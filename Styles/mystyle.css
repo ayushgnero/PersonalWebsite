@@ -1,14 +1,12 @@
 body,
 html {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     margin: 0;
     background-color: #050808;
-    overflow-x: hidden;
 }
 
-html .content,
-body .content {
+.content {
     position: relative;
     left: 50%;
     top: 50%;
@@ -16,8 +14,7 @@ body .content {
     text-align: center;
 }
 
-html .content span,
-body .content span {
+.content span {
     width: 30px;
 }
 
@@ -33,79 +30,331 @@ body .content span {
     z-index: 99;
     margin: 2vw;
 }
+
 .shuffle {
-    cursor:auto;  
-  }
-  
-.flex {
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-    display: flex;
-    z-index: 99;
-    position: relative;
-    justify-content: center;
-    scroll-snap-align: start;
+    cursor: auto;
 }
 
 .model {
-    position: absolute;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    animation: taadaa 1s;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+.textName {
+    font-family: 'Dorsa', sans-serif;
+    line-height: 1vh;
+    text-align: right;
+    animation: taadaa 2s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
 }
 
-.textName{
-    font-family: 'Dorsa', sans-serif;
-    line-height: 1vh;
-    text-align: right;
+.box {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    display: flex;
+    z-index: 99;
+    position: fixed;
+    opacity: 0;
+    color: white;
+    transition: opacity 0.5s;
 }
 
-@media (width<=450px) {
+@keyframes taadaa {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 10%, 0);
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes navlinkanim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes navlinkanim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.links {
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.links:hover {
+    opacity: 1;
+    transition-duration: 0.1s;
+}
+
+
+.linksimg {
+    z-index: 999;
+    position: fixed;
+    display: grid;
+    bottom: 40px;
+    grid-gap: 3vh;
+    margin-left: 2vw;
+    animation: taadaa 1s;
+}
+
+.vl {
+    border: 2px solid red;
+    height: 20vh;
+    width: 0;
+    margin-left: 50%;
+    opacity: 0.7;
+    animation: navlink 1s;
+}
+
+.vldot {
+    border: 2px solid red;
+    height: 1px;
+    width: 1px;
+    border-radius: 50%;
+    margin-left: 50%;
+    opacity: 0.7;
+    animation: navlink 1s;
+}
+
+.navFlex {
+    color: white;
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    gap: 5vw;
+    bottom: 10px;
+    z-index: 9999;
+}
+
+.navlink {
+    cursor: pointer;
+    animation: navlinkanim 1s;
+}
+
+.workcal {
+    width: 83vw;
+    height: 80vh;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 0.04fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.caldiv {
+    width: 40rem;
+    float: right;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+.infowork {
+    font-family: 'Josefin Slab', serif;
+    font-weight: 600;
+    color: #f00;
+    font-size: 18px;
+    line-height: 9px;
+    width: 13vw;
+}
+
+.div1 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    align-content: center;
+    text-align: right;
+    padding: 20px;
+}
+
+.div3 {
+    grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    align-content: center;
+    text-align: left;
+    padding: 20px;
+}
+
+.div4 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.div5 {
+    grid-area: 3 / 2 / 4 / 3;
+    display: grid;
+    align-content: center;
+    text-align: right;
+    padding: 20px;
+}
+
+.div6 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.calcorder_upper {
+    height: 10vh;
+}
+
+@media (max-width:450px) {
     .main {
         height: 100vh;
         width: 100vw;
-        position: absolute;
+        position: fixed;
         z-index: 99;
         display: flex;
         justify-content: center;
     }
 
-    .flex {
+    .box {
         width: 100vw;
         height: 100vh;
-        align-items: center;
         display: grid;
         z-index: 99;
-        position: relative;
-        justify-content: center;
-        place-items: center;
-        margin: auto;
-        grid-gap: 0px;
+        position: fixed;
     }
-    .name{
+
+    .box h1 {
+        color: #dfdfdf;
+        font-size: 8rem;
+    }
+
+    .box h2 {
+        color: gray;
+        font-size: 3rem;
+    }
+
+    .name {
         min-width: 70vw;
         max-width: 80vw;
         text-align: center;
+        font-size: 0.5rem;
     }
-}
 
-.snap{
-    scroll-snap-type: y mandatory;
-    overflow-y:scroll;
-    height: 100vh;
-}
+    .linksimg {
+        z-index: 999;
+        position: fixed;
+        display: flex;
+        bottom: 40px;
+        grid-gap: 3vh;
+        margin-left: 2vw;
+        width: 100vw;
+        justify-content: center;
+    }
 
-section{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
+    .vl {
+        display: none;
+    }
 
-.page2{
-    position: absolute;
-    width: 100vw;
-    color:#fff;
-    scroll-snap-align: start;
+    .vldot {
+        display: none;
+    }
+
+    .links {
+        width: 1rem;
+        height: 1rem;
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+    .navlink p {
+        display: none
+    }
+
+    .navlink {
+        border: 1px solid white;
+        border-radius: 60%;
+        height: 1px;
+        width: 1px;
+        opacity: 1;
+    }
+
+    .navFlex {
+        color: white;
+        position: fixed;
+        justify-content: center;
+        right: 10px;
+        height: 10vh;
+        width: 2vw;
+        display: grid;
+        top: 50vh;
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: 0.04fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .div1 {
+        grid-area: 1 / 2 / 2 / 3;
+
+    }
+
+    .div2 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .div3 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .div4 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .div5 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .div6 {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+
 }

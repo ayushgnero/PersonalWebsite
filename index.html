@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dorsa&family=Major+Mono+Display&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dorsa&family=Josefin+Slab:wght@300;700&family=Major+Mono+Display&family=Pixelify+Sans&display=swap');
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="/Scripts/Lib/PRWMLoader.js"></script>
     <link rel="stylesheet" href="Styles/mystyle.css">
+    <link rel="stylesheet" href="Styles/ScrollAnim.css">
     <link rel="stylesheet" href="Styles/Loader.css">
 
     <title>Ayush Gautam</title>
@@ -19,38 +20,212 @@
     <div class="loader-container">
         <div class="loader"></div>
     </div>
-    <div class="main container">
-        <section id="canvas" class="model">
-            <script src="/Scripts/ModelScripts/App.js"></script>
-        </section>
-        <section class="flex">
-            <div class="name textName">
-                <h1 style="color: #dfdfdf;
-                font-size: 13rem;">
-                    Ayush
-                </h1>
-                <h2 style="color: gray;
-                font-size: 5rem;">
-                    Gautam
-                </h2>
+    <div class="main snap">
+        <div>
+            <div id="canvas" class="model">
+                <script src="/Scripts/ModelScripts/App.js"></script>
             </div>
-            <div class="name" style="
-                max-width: 40vw;
-                display: flex;
-                align-items: center;
-                overflow: hidden;
-                ">
-                    <p style="color:white;
-                    font-family: 'Major Mono Display', monospace;
-                    " class="shuffle">Full Stack Developer from Bangalore, India, with a knack for crafting secure B2B applications.</p>
+            <div class="linksimg">
+                <a href="https://github.com/ayushgnero"><img src="Static/icons8-github-24.png" class="links" /></a>
+                <a href="https://www.linkedin.com/in/ayushgnero/"><img src="Static/icons8-linkedin-24.png"
+                        class="links" /></a>
+                <a href="Static/Ayush_Gautam_Resume.pdf" target="_blank"><img src="Static/icons8-resume-24.png"
+                        class="links" /></a>
+
+
+                <div class="vl"></div>
+                <div class="vldot"></div>
+
             </div>
-        </section>
-        <section class="page2">
-            <h2>hello</h2>
-        </section>
+            <div>
+                <div class="box flex" id="box1">
+                    <div class="name textName">
+                        <h1 style="color: #dfdfdf;
+                            font-size: 13rem;">
+                            Ayush
+                        </h1>
+                        <h2 style="color: gray;
+                            font-size: 5rem;">
+                            Gautam
+                        </h2>
+                    </div>
+                    <div class="name" style="
+                        max-width: 40vw;
+                        display: flex;
+                        align-items: center;
+                        overflow: hidden;
+                    ">
+                        <p style="color: white;
+                            font-family: 'Major Mono Display', monospace;
+                        " class="shuffle">Full Stack Developer from Bangalore, India, with a knack for crafting secure
+                            B2B applications.</p>
+                    </div>
+                </div>
+                <div class="box flex" id="box2">
+                    <div class="workcal">
+                        <div class="parent">
+                            <div class="caldiv div1">
+                                <p style="list-style-type: none;">
+                                    <span>
+                                        Implemented enhanced security measures by migrating clear text secrets from a
+                                        Django codebase to
+                                        a secret handler responsible for encryption and decryption. This ensured
+                                        improved data protection
+                                        and secure secret management.
+                                    </span>
+                                    <br /><br />
+                                    <span>
+                                        Developed a Single Sign-On (SSO) feature capable of integrating any Identity
+                                        Provider (IDP) using
+                                        the PKCE flow. This allowed users access to multiple IDPs and internal IDPs for
+                                        enhanced security
+                                        and versatility.
+                                    </span>
+                                    <br /><br />
+                                    <span>
+                                        Designed and implemented a ransomware detection platform that scans files during
+                                        backups for
+                                        malware patterns. Upon detection, the backup is quarantined, and users are
+                                        promptly notified
+                                        through both email and in-program notifications, thereby minimizing potential
+                                        security breaches.
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="caldiv div4">
+                                <p style="list-style-type: none;">
+                                    <span>
+                                        Strengthened system security and user login experience by successfully
+                                        integrating MSAL (Microsoft
+                                        Authentication Library) into the application
+                                    </span>
+                                    <br /><br />
+                                    <span>
+                                        Spearheaded the implementation of a robust Video Proctoring system equipped with
+                                        advanced
+                                        recognition technology, ensuring a secure examination environment by preventing
+                                        unauthorized
+                                        activities
+                                    </span>
+                                    <br /><br />
+                                    <span>
+                                        Dockerized the production code, resulting in faster and more efficient
+                                        deployments
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="caldiv div6">
+                                <p style="list-style-type: none;">
+                                    <span>
+                                        Developed a mapping system to facilitate school pickups for clients, enhancing
+                                        convenience and
+                                        efficiency.
+                                    </span>
+                                    <br /><br />
+                                    <span>
+                                        Successfully delivered an HTML to PDF converter, enabling easy distribution of
+                                        school pamphlets.
+                                    </span>
+                                    <br /><br />
+                                    <span>
+                                        Implemented a scrapper and crawler to keep school websites up to date on the
+                                        main website
+                                    </span>
+                                </p>
+                            </div>
+                            <div class=" div2">
+                                <div class="calcorder upper">
+                                    
+                                </div>
+                                <div class="calcorder circle">
+                                </div>
+                                <div class="calcorder lower">
+                                </div>
+                                <div class="infowork">
+                                    <p>
+                                        <span>
+                                            BETSOL<br/><br/>Associate Software Developer
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span>
+                                            June-2022<br/><br/>August2023
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class=" div3">
+                                <div class="calcorder upper">
+                                    
+                                </div>
+                                <div class="calcorder circle">
+                                </div>
+                                <div class="calcorder lower">
+                                </div>
+                                <div class="infowork">
+                                    <p>
+                                        <span>
+                                            BETSOL<br/><br/>Intern
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span>
+                                            January-2022<br/><br/>June2022
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class=" div5">
+                                <div class="calcorder upper">
+                                    
+                                </div>
+                                <div class="calcorder circle">
+                                </div>
+                                <div class="calcorder lower">
+                                </div>
+                                <div class="infowork">
+                                    <p>
+                                        <span>
+                                            Addrish Technologies<br/><br/>Intern
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span>
+                                            April-2019<br/><br/>May2019
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box flex" id="box3">
+                    <h1>hello world2</h1>
+                </div>
+                <div class="box flex" id="box3">
+                    <h1>hello world3</h1>
+                </div>
+                <div class="navFlex">
+                    <div class="navlink">
+                        <p>is.Who()</p>
+                    </div>
+                    <div class="navlink">
+                        <p>is.Work()</p>
+                    </div>
+                    <div class="navlink">
+                        <p>is.Project()</p>
+                    </div>
+                    <div class="navlink">
+                        <p>is.Contact()</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
     <script src="/Scripts/ModelScripts/Loader.js"></script>
     <script src="/Scripts/ModelScripts/Shuffle.js"></script>
+    <script src="/Scripts/ModelScripts/ScrollAnim.js"></script>
 
 </body>
 

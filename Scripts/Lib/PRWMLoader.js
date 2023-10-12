@@ -1,7 +1,3 @@
-/**
- * @author Kevin Chapelier / https://github.com/kchapelier
- * See https://github.com/kchapelier/PRWM for more informations about this file format
- */
 
 ( function ( THREE ) {
 
@@ -9,10 +5,6 @@
 
 	var bigEndianPlatform = null;
 
-	/**
-	 * Check if the endianness of the platform is big-endian (most significant bit first)
-	 * @returns {boolean} True if big-endian, false if little-endian
-	 */
 	function isBigEndianPlatform() {
 
 		if ( bigEndianPlatform === null ) {
@@ -31,7 +23,6 @@
 
 	}
 
-	// match the values defined in the spec to the TypedArray types
 	var InvertedEncodingTypes = [
 		null,
 		Float32Array,
@@ -46,7 +37,6 @@
 		Uint32Array
 	];
 
-	// define the method to use on a DataView, corresponding the TypedArray type
 	var getMethods = {
 		Uint16Array: 'getUint16',
 		Uint32Array: 'getUint32',
